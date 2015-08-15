@@ -1,2 +1,2 @@
 # Cancellable-Template
-Implementation and understanding Cancellable Templates in Biometrics for privacy protection
+Understanding and Implementing Cancellable Templates in Biometrics for privacy protection
