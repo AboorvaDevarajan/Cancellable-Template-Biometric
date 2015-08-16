@@ -1,7 +1,8 @@
 # Cancellable-Template
+
 Understanding and Implementing Cancellable Templates in Biometrics for privacy protection
 
-Implemented minutiae extraction from the finger print image.
+<b>Implemented minutiae extraction from the finger print image. </b>
 
 Steps involved
   1. Image thinning.
@@ -26,7 +27,8 @@ Steps involved
 
 ![minutiae](https://cloud.githubusercontent.com/assets/3117217/9293508/32d3e728-444b-11e5-8ba4-9bdfa23dcbc9.png)
 
+<b> Converting coordinates to csv for processing </b>
 
+<b> Cancellable Template implementation (POC) : Method 1 </b>
 
-
-
+ 
