@@ -78,17 +78,25 @@ for i=1:len
     outImg((bifurcation_x(i)-3),(bifurcation_y(i)-3):(bifurcation_y(i)+3),3)=255;
     outImg((bifurcation_x(i)+3),(bifurcation_y(i)-3):(bifurcation_y(i)+3),3)=255;
 end
+
 disp(size(ridge_x))
 disp(size(ridge_y))
 disp(size(bifurcation_x))
 disp(size(bifurcation_y))
 
+#concatenating the x,y minutiae coordinates
+
+minutiae_x = vertcat(ridge_x,bifurcation_x)
+minutiae_y = vertcat(ridge_y,bifurcation_y)
 
 ridges = horzcat(ridge_x,ridge_y);
 bifurcation = horzcat(bifurcation_x,bifurcation_y);
 
-
-#disp(ridges)
-#disp(bifurcation)
+minutiae = horzcat(minutia_x,minutiae_y);
 
 figure;imshow(outImg);title('Minutiae');
+
+#plotting the minutiae points as a graph
+figure;plot(minutiae_x,minutiae_y,'*');title('Minutiae Points Graph')
+
+
