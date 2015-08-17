@@ -92,11 +92,35 @@ minutiae_y = vertcat(ridge_y,bifurcation_y)
 ridges = horzcat(ridge_x,ridge_y);
 bifurcation = horzcat(bifurcation_x,bifurcation_y);
 
-minutiae = horzcat(minutia_x,minutiae_y);
+minutiae = horzcat(minutiae_x,minutiae_y);
 
 figure;imshow(outImg);title('Minutiae');
 
 #plotting the minutiae points as a graph
 figure;plot(minutiae_x,minutiae_y,'*');title('Minutiae Points Graph')
+
+
+#calculating the distance between the selected reference minutiae point with all other minutiae points 
+distance =[];
+disp('length')
+disp(length(minutiae))
+for i=2:length(minutiae)
+     distance(i) = sqrt(((minutiae_x(i)-minutiae_x(1))*(minutiae_x(i)-minutiae_x(1)))+((minutiae_y(1)-minutiae_y(i))*(minutiae_y(1)-minutiae_y(i)))); 
+end
+
+disp(distance);
+
+x = 2:length(minutiae)
+disp(x)
+y = distance(x)
+figure
+plot(x,y,'--gs',...
+    'LineWidth',2,...
+    'MarkerSize',10,...
+    'MarkerEdgeColor','b',...
+    'MarkerFaceColor',[0.5,0.5,0.5])
+title('Distance Graph')
+xlabel('x')
+ylabel('distance from reference minutiae')
 
 
