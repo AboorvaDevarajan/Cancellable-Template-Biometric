@@ -29,6 +29,23 @@ Steps involved
 
 <b> Converting coordinates to csv for processing </b>
 
+Get the respective (x,y) coordinates for the corresponding ridges and bifurcation points (minutiae) and store it in a csv / array.
+
+Coordinates of  minutiae points are stored in an 1-D array and the corresponding line graph is plotted to visualize the points.
+
+![screenshot from 2015-08-17 10 27 42](https://cloud.githubusercontent.com/assets/3117217/9298375/85c0ec6c-44cb-11e5-99de-733e6bdcfe01.png)
+
+
 <b> Cancellable Template implementation (POC) : Method 1 </b>
 
- 
+Proposed Method : 1 
+ 1. Distance calculation between the minutiae coordinates using neo4j graph database.
+ 2. Implementing reverse tranformation logic.
+
+
+Implemented:
+
+1. Choose a reference point in the list of minutiae.
+2. Find the distance from the reference minutiae to all other minutiae points.
+
+![screenshot from 2015-08-17 10 24 31](https://cloud.githubusercontent.com/assets/3117217/9298390/e42232d4-44cb-11e5-9d1f-c95d274fcfe4.png)
